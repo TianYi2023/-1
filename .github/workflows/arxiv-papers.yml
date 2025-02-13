@@ -1,8 +1,7 @@
 name: ARXIV Papers Daily on Feishu
 
 on:
-  schedule:
-    - cron: '41 11 * * *'  # 每天UTC时间8:30运行（北京时间16:30）
+  workflow_dispatch:
 
 jobs:
   send-papers:
