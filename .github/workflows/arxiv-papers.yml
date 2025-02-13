@@ -1,0 +1,17 @@
+name: ARXIV Papers Daily on Feishu
+
+on:
+  schedule:
+    - cron: '30 8 * * *'  # 每天UTC时间8:30运行（北京时间16:30）
+
+jobs:
+  send-papers:
+    name: Fetch and Send Arxiv Papers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Arxiv to Feishu
+        uses: junka/arxiv_feishu_bot_action@main
+        with:
+          keyword: 'CVPR'  # 改为你的领域关键词（如：LLM, Computer Vision等）
+          webhook: ${{ secrets.FEISHU_BOT_WEBHOOK }}
+          signkey: ${{ secrets.FEISHU_BOT_SIGNKEY }}
