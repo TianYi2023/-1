@@ -2,7 +2,7 @@ name: ARXIV Papers Daily on Feishu
 
 on:
   schedule:
-    - cron: '30 8 * * *'  # 每天UTC时间8:30运行（北京时间16:30）
+    - cron: '30 11 * * *'  # 每天UTC时间8:30运行（北京时间16:30）
 
 jobs:
   send-papers:
@@ -13,5 +13,5 @@ jobs:
         uses: junka/arxiv_feishu_bot_action@main
         with:
           keyword: 'CVPR'  # 改为你的领域关键词（如：LLM, Computer Vision等）
-          webhook: ${{ secrets.FEISHU_BOT_WEBHOOK }}
-          signkey: ${{ secrets.FEISHU_BOT_SIGNKEY }}
+          webhook: ${{ https://open.feishu.cn/open-apis/bot/v2/hook/e6a8fec2-23bb-4736-99f5-b7ea02fd3b5d }}
+          signkey: ${{ lLChRgE8fHBmm7LhPVoYnOIhHeTt6CLN }}
