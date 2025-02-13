@@ -2,7 +2,7 @@ name: ARXIV Papers Daily on Feishu
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '55 04 * * *' 
   workflow_dispatch:
 
 jobs:
