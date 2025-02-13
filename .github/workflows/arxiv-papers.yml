@@ -13,6 +13,6 @@ jobs:
       - name: Arxiv to Feishu
         uses: junka/arxiv_feishu_bot_action@main
         with:
-          keyword: 'CVPR'  # 改为你的领域关键词（如：LLM, Computer Vision等）
+          keyword: 'artificial intelligence'  # 改为你的领域关键词（如：LLM, Computer Vision等）
           webhook: ${{ secrets.FEISHU_BOT_WEBHOOK }}
           signkey: ${{ secrets.FEISHU_BOT_SIGNKEY }}
